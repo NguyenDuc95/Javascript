@@ -1,0 +1,31 @@
+.container{
+    width: 80%;
+    height: 30em;
+    margin: auto;
+}
+.shape-ara{
+    width: 80%;
+    height: 100%;
+    background-color: wheat;
+    float: left;
+}
+#shape{
+    margin: auto;
+    background-color: tomato;  
+    width: 100px;
+    height: 100px;
+}
+
+.option{
+    width: 20%;
+    height: 100%;
+    background-color: turquoise;
+    float: left;
+}
+.option ul li{
+    display: inline;
+}
+#color{
+    display: block;
+    margin: 0 auto;
+}
