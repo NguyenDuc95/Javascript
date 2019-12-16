@@ -1,7 +1,9 @@
+
 .container{
     width: 80%;
     height: 30em;
     margin: auto;
+    box-sizing: border-box;
 }
 .shape-ara{
     width: 80%;
@@ -10,7 +12,7 @@
     float: left;
 }
 #shape{
-    margin: auto;
+    margin: 150px auto;
     background-color: tomato;  
     width: 100px;
     height: 100px;
@@ -19,13 +21,19 @@
 .option{
     width: 20%;
     height: 100%;
-    background-color: turquoise;
+    background-color: whitesmoke;
     float: left;
 }
-.option ul li{
-    display: inline;
+.option div{
+    border-bottom: 1px solid tomato;
 }
-#color{
+.option button{
+    display: block;
+    width: 100px;
+    height: 50px;
+}
+#title-color{
+    text-align: center;
     display: block;
     margin: 0 auto;
 }
