@@ -1,0 +1,1 @@
+// 5.	Cho một mảng gồm 5 phần tử tìm phần tử lớn nhất

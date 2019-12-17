@@ -1,0 +1,1 @@
+// 8.	Cho một mảng gồm 5 phần tử tính tổng các phần tử trong mảng

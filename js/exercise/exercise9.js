@@ -1,0 +1,1 @@
+// 9.	Cho một mảng gồm 5 phần tử tính trung cộng các phần tử trong mảng
