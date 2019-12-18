@@ -1,2 +1,6 @@
 Node js
 https://www.nodebeginner.org/index-vi.html
+Install typescirpt:
+link: https://code.visualstudio.com/docs/typescript/typescript-compiling
+code . in visual studio code:
+https://stackoverflow.com/questions/46638944/code-is-not-recognized-as-an-internal-or-external-command
