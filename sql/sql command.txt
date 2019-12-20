@@ -1,0 +1,36 @@
+sql:
+// effect table
+* CREATE table
+- CREATE TABLE table_name(col1 TEXT,col2 INTEGER, PRIATE KEY(col1));
+* ALTER TABLE
+* DROP TABLE
+
+// effect to data of table
+* select: 
+- SELECT * FROM table_name;
+- SELECT col_name1,col_name2 FROM table_name;
+
+* get data with filter : WHERE
+- SELECT col_name1, col_name2 FROM table_name WHERE <condition>
+Ex: SELECT id, name, age FROM student_table WHERE age>10
+- SELECT col_name1, col_name2 FROM table_name WHERE <condition1> AND <Condition2>
+- ... OR ...
+
+* get data with order, orrange return data: ORDER
+- SELECT col_1, col_2 FROM table_name ORDER BY col_2 DESC;
+// DESC: decrease, ASC: increase
+
+* INSERT:
+- INSERT INTO table_name(col_1,col_2) VALUES (value1,value2)
+
+* UPDATE:
+- UPDATE table_name SET col_1=value1, col_2=value2
+- UPDATE table_name SET col_1=value1 WHERE <condition>
+
+* UPSERT: Create if table is not exist element and update if exist
+
+* DELETE:
+// delete all data of table
+- DELETE FROM table_name
+// delete the element with condition
+- DELETE FROM table_name WHERE <condition>
