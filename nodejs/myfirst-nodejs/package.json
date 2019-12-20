@@ -1,0 +1,14 @@
+{
+  "name": "my-first-program",
+  "version": "1.0.0",
+  "description": "first program nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "my-first-node"
+  ],
+  "author": "",
+  "license": "MIT"
+}

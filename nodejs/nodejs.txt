@@ -1,0 +1,7 @@
+// install nodejs
+npm init
+keyword:
+require
+createServer
+writeHead
+end
