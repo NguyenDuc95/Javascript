@@ -1,4 +1,6 @@
 sql:
+// create database
+- CREATE DATABASE IF NOT EXISTS DBName;
 // effect table
 * CREATE table
 - CREATE TABLE table_name(col1 TEXT,col2 INTEGER, PRIATE KEY(col1));
