@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    background-color:  #e0e0d1;
+    width: 400px;
+    height: 250px;
+    margin:200px auto;
+    border-radius: 20px;
+}
+#time{
+    height: 80%;
+    color: #0000cc;
+    text-align: center;
+    font-size: 120px; 
+}
+#control{
+    height: 20%;
+    text-align: center;
+}
+#control button{
+    border: none;
+    width: 20%;
+    height: 80%;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#control button:hover{
+    background-color: #99bbff;
+}

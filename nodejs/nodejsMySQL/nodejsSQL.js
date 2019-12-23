@@ -48,6 +48,15 @@ app.post('/employees/create', (req, res) => {
     let sql = `INSERT INTO persons(id,name) VALUES (${req.body.id},"${req.body.name}")`;
     conn.query(sql, (err) => {
         if (err) throw err;
+        console.log('create a new record');
+    });
+});
+app.put('/employees/update', (req, res) => {
+    res.send(JSON.stringify(res.body));
+    // UPDATE table_name SET name=value1, col_2=value2
+    let sql = `UPDATE persons SET name="${req.body.name}" WHERE id=${req.body.id}`;
+    conn.query(sql, (err) => {
+        if (err) throw err;
     });
 });
 
