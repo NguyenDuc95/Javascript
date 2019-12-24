@@ -4,21 +4,22 @@ var start_timer = false;
 var init_timer = true;
 var second = 0;
 var min = 0;
-function initTimer() {
-    start_timer = true;
+const startTimer = () => start_timer = true;
+const stopTimer = () => start_timer = false;
+const setTextTimer = (second, min) => clock.textContent = `${("0" + min).slice(-2)}:${("0" + second).slice(-2)}`;
+const resetTimer = () => {
+    second = 0;
+    min = 0;
+    setTextTimer(second, min);
 }
-function getDate() {
-
+const getDate = () => {
     if (start_timer) {
         second++;
         if (second == 60) {
             min++;
             second = 0;
         }
-        let formatSecond = ("0" + second).slice(-2);
-        let formatmin = ("0" + min).slice(-2);
-        clock.textContent = `${formatmin}:${formaFtSecond}`;
-        console.log(1);
+        setTextTimer(second, min);
     }
 }
 setInterval(getDate, 1000);

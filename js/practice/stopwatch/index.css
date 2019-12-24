@@ -33,3 +33,9 @@
 #control button:hover{
     background-color: #99bbff;
 }
+#control button:focus{
+    outline: none;
+}
+#control button:active{
+   background-color: #1e8709;
+}
