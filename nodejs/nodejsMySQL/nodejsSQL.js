@@ -7,7 +7,7 @@ var users;
 app.use(bodyParser.json());
 app.listen(8080, (err) => {
     if (err) throw err;
-    console.log(`Server started on port 3000`);
+    console.log(`Server started on port 8080`);
 });
 
 var conn = mysql.createConnection(
@@ -15,13 +15,14 @@ var conn = mysql.createConnection(
         host: 'localhost',
         user: 'root',
         password: '1234',
-        database: 'testSQL'
+        database: 'testsql'
     }
 );
 // connect to sql
 conn.connect((err) => {
-    console.log(`connect to sql`);
+   
     if (err) throw err;
+    console.log(`connect to sql`);
     //create table
     let sql = "CREATE TABLE IF NOT EXISTS persons (id INTEGER, name text)";
     conn.query(sql, (err_table) => {
