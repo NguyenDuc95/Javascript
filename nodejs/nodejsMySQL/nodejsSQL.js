@@ -59,4 +59,26 @@ app.put('/employees/update', (req, res) => {
         if (err) throw err;
     });
 });
-
+// get param, gia su it valid
+const getParamURL=(urlString)=>{
+    // get query
+    let queryString = urlString.split('?')[1];
+    let arr = queryString.split('&');
+    let params = {};
+    for(element of arr){
+        console.log(`element-${element}`);
+        let arr_param= element.split('=');
+        params[arr_param[0]]= arr_param[1];
+    }
+    return params;
+}
+// localhost:8080/employees?name=a&page=2
+app.get('/employeesdata?', (req, res) => {
+    res.send(getParamURL(`param: ${req.url}`));
+    // console.log(`url: ${req.url}`);
+    let sql = `SELECT * FROM persons WHERE CONTAINS (name,"a")`;
+    conn.query(sql, (err, results) => {
+        if (err) throw err;
+        res.send(results);
+    });
+});
