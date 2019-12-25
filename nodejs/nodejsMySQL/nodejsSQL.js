@@ -75,9 +75,9 @@ const getParamURL=(urlString)=>{
 }
 // localhost:8080/employees?name=a&page=2
 app.get('/employeesdata?', (req, res) => {
-    res.send(getParamURL(`param: ${req.url}`));
+    // res.send(getParamURL(`param: ${req.url}`));
     // console.log(`url: ${req.url}`);
-    let sql = `SELECT * FROM persons WHERE CONTAINS (name,"a")`;
+    let sql = `SELECT * FROM persons WHERE name LIKE '%hoang%'`;
     conn.query(sql, (err, results) => {
         if (err) throw err;
         res.send(results);
