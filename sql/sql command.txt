@@ -36,3 +36,6 @@ Ex: SELECT id, name, age FROM student_table WHERE age>10
 - DELETE FROM table_name
 // delete the element with condition
 - DELETE FROM table_name WHERE <condition>
+
+// with server SQL 2019 ver 8.0
+ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY '12345';// 12345 is password
