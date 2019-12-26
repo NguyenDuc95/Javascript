@@ -2,7 +2,7 @@ const mysql = require('mysql');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-var users;
+// var users;
 
 app.use(bodyParser.json());
 app.listen(8080, (err) => {
@@ -37,15 +37,15 @@ app.get('/employees', (req, res) => {
         res.send(results);
     });
 });
-app.get('/employees/view/:id', (req, res) => {
-    let sql = `SELECT * FROM persons WHERE id=${req.params.id}`;
+app.get('/employees/:employeeId', (req, res) => {
+    let sql = `SELECT * FROM persons WHERE id=${req.params.employeeId}`;
     conn.query(sql, (err, results) => {
         if (err) throw err;
         res.send(results);
     });
 });
 app.post('/employees/create', (req, res) => {
-    res.send(JSON.stringify(req.body));
+    // res.send(JSON.stringify(req.body));
     let sql = `INSERT INTO persons(id,name) VALUES (${req.body.id},"${req.body.name}")`;
     conn.query(sql, (err) => {
         if (err) throw err;
