@@ -1,0 +1,45 @@
+npm init react-app app-name (npm V6+)
+npx create-react-app app-name (npm v5+)
+
+update npm to lastest version
+npm i -g npm
+
+install proxy
+npm config set proxy http://UserName:passWord@proxy.tsdv.com.vn:3128
+npm config set https-proxy http://UserName:password@proxy.tsdv.com.vn:3128
+
+File: app.css
+app.js index.js
+log.svg
+
+file index.js xoa worker
+
+// set port before yarn start
+set PORT=4000
+
+
+ham bat dong bo
+ham dong bo
+// keyword
+setState
+state in react
+****
+state is a object
+state us immutable >< mutable 
+(only change by setState)
+state name is "state" endforcing by react
+setState is asynchronous
+
+// something here
+return in render just 1 div
+
+React: name of Component - viet Hoa chu cai dau
+Prop Propeties
+
+this.props
+
+
+
+// prop
+
+
