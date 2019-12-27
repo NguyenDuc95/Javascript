@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script crossorigin src="lib/react.development.js"></script>
+    <script crossorigin src="lib/react-dom.development.js"></script>
+    <script crossorigin src="lib/browser.min.js"></script>
 </head>
+
 <body>
-    <h1>hello something here</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+    ReactDOM.render(<h1> hello something </h1>,document.getElementById('root'));
+    </script>
 </body>
+
 </html>
