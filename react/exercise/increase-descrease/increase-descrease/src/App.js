@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import EncreaseDescrease from './component/EncreaseDecrease.js';
+import IncreaseDecrease from './component/IncreaseDecrease.js';
 import FormInput from './component/FromInput'
 
 class App extends Component {
@@ -14,15 +14,14 @@ class App extends Component {
           <div>
             <div className="exercise1">
               <h2>Exercise 1</h2>
-              <EncreaseDescrease className="Exercise1" />
-              
+              <IncreaseDecrease className="Exercise1" />
             </div>
             <div className="exercise2">
-            <h2>Exercise 2</h2>
-              <EncreaseDescrease isDisable={true} />
+              <h2>Exercise 2</h2>
+              <IncreaseDecrease isDisable={true} />
             </div>
             <div className="exercise3">
-            <h2>Exercise 3</h2>
+              <h2>Exercise 3</h2>
               <FormInput />
             </div>
 

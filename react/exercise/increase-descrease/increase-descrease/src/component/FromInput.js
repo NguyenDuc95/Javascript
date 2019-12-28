@@ -7,16 +7,17 @@ class FromInput extends Component {
     }
     render() {
         return (
-            <div className="App">
+            <div className="IncreaseDecrease">
                 <body>
                     <div>
+                        <div></div>
                         <button onClick={() => {
                             this.setState({ valueButton: this.state.isShow ? "Show input" : "Not show input", isShow: !this.state.isShow })
                         }}>{this.state.valueButton}</button>
                         <div>
                             {this.state.isShow ? <input type="text" autoFocus /> : null}
                         </div>
-
+                        
                     </div>
                 </body>
             </div>

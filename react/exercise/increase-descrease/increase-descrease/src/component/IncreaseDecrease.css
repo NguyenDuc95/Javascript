@@ -1,0 +1,26 @@
+* {}
+
+.IncreaseDecrease button {
+    background-color: white;
+    border: none;
+    min-width: 15vh;
+    max-width: 15vh;
+    min-height: 5vh;
+    border-radius: 10%;
+}
+
+.IncreaseDecrease button:hover {
+    background-color: rgb(96, 162, 238);
+}
+
+.IncreaseDecrease button:active {
+    background-color: rgb(168, 197, 38);
+}
+
+.IncreaseDecrease button:focus {
+    outline: 0em;
+}
+.IncreaseDecrease button:disabled{
+    background-color: gray;
+    color: white;
+}

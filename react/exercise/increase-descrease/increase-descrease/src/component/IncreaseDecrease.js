@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
+import './IncreaseDecrease.css';
 
-class EncreaseDecrease extends Component {
+class IncreaseDecrease extends Component {
     static defaultProps = {
         isDisable: false
     }
     state = {
-
         counter: 0,
-        isEncrease: true,
-        valueButton: "Encrease",
+        isIncrease: true,
+        valueButton: "Increase",
         stateButton: false
     }
     render() {
         return (
-            <div className="App">
-                <div>{this.state.counter}</div>
+            <div className="IncreaseDecrease" >
                 <button onClick={() => {
                     this.setState((currentState) => {
                         if (currentState.counter === 0) {
-                            currentState.isEncrease = true;
+                            currentState.isIncrease = true;
                         }
                         if (currentState.counter === 20) {
-                            currentState.isEncrease = false;
+                            currentState.isIncrease = false;
                         }
-                        if (currentState.isEncrease) {
-                            return { counter: currentState.counter + 1 }
+                        if (currentState.isIncrease) {
+                            return { counter: currentState.counter + 1, valueButton:"Increase" }
                         } else {
                             if (!this.props.isDisable) {
                                 currentState.valueButton = "Decrease"
@@ -34,12 +33,14 @@ class EncreaseDecrease extends Component {
                             }
                             return { stateButton: currentState.stateButton, counter: currentState.counter - 1 }
                         }
+
                     })
                 }} disabled={this.state.stateButton}>{this.state.valueButton}</button>
+                <div>{this.state.counter}</div>
             </div >
         );
     }
 
 }
 
-export default EncreaseDecrease;
+export default IncreaseDecrease;
