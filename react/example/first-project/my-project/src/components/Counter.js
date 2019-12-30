@@ -1,6 +1,7 @@
 import React from 'react';
 import FancyText from './FancyText';
 
+
 export default class Counter extends React.Component {
     // deafult props
     static defaultProps = {
@@ -47,21 +48,12 @@ export default class Counter extends React.Component {
                             counter2: currentState.counter2 - 1
                         }
                     })
-                    // this.setState((currentState) => {
-                    //     return {
-                    //         counter: currentState.counter + 1,
-                    //         counter2: currentState.counter2 - 1
-                    //     }
-                    // })
                 }}>click here</button>
             </div>
         );
     }
 
 }
-// setState(updaterObject)
-// setState(func(currentState){})
-//  updater object
 
 
 

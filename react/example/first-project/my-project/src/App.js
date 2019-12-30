@@ -11,16 +11,12 @@ class App extends Component {
   }
 
   render() {
-    const testObj = { a: 1, b: 2 };
+    // const testObj = { a: 1, b: 2 };
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <button onClick={() => this.setState({ showCounter: !this.state.showCounter })}><FancyText>Toggle counter</FancyText></button>
-          {this.state.showCounter ? <Counter startAt={1} testObj={testObj} /> : null}
+          {/* <button onClick={() => this.setState({ showCounter: !this.state.showCounter })}><FancyText>Toggle counter</FancyText></button>
+          {this.state.showCounter ? <Counter startAt={1} testObj={testObj} /> : null} */}
         </header>
       </div>
     );
