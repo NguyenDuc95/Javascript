@@ -7,3 +7,6 @@ https://stackoverflow.com/questions/46638944/code-is-not-recognized-as-an-intern
 // learn something
 sololearn
 https://scotch.io/
+
+http://dummy.restapiexample.com/
+https://github.com/axios/axios

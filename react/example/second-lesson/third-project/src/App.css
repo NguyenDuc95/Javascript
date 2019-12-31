@@ -36,22 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.container{
-  background-color: darkgrey;
-}
-.link-container{
-  padding: 15px;
-  background-color: orange;
-  min-height: 20px;
-  color: white;
-}
-.conten-container{
-  padding: 15px;
-  background-color: green;
-  min-height: 100px;
-  min-width: 200px;
-  color: white;
-}
-.link-container a{
-  margin-right: 10px;
-}
