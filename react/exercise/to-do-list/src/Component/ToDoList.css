@@ -1,0 +1,78 @@
+.ToDoList {
+    font-size: calc(10px + 2vmin);
+    box-sizing: border-box;
+}
+
+.input-area {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.input-area button {
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+    border-radius: 6%;
+    min-height: 26px;
+    border: none;
+}
+
+.input-area button:focus {
+    outline: none;
+}
+
+.input-area button:hover {
+    background-color: navajowhite;
+}
+
+.input-area button:active {
+    background-color: #282c34;
+    color: white;
+}
+
+.input-area {
+    max-width: 80%;
+}
+
+.input-area input {
+    margin-right: 20px;
+    display: block;
+    float: left;
+    width: 70%;
+    min-height: 24px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.input-area input:focus {
+    outline: none;
+}
+
+#clear {
+    clear: both;
+}
+
+.show-area {
+    width: 80%;
+    margin: auto;
+}
+
+.show-area ul {
+    list-style-type: circle;
+    display: table;
+}
+
+.show-area ul li {
+    text-align: left;
+    text-decoration-color: blue;
+    user-select: none;
+}
+
+.show-area li:active {
+    text-decoration: line-through;
+}

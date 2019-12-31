@@ -10,23 +10,23 @@ class App extends Component {
         <header className="App-header">
           React Training 1
         </header>
-        <body>
-          <div>
-            <div className="exercise1">
-              <h2>Exercise 1</h2>
-              <IncreaseDecrease className="Exercise1" />
-            </div>
-            <div className="exercise2">
-              <h2>Exercise 2</h2>
-              <IncreaseDecrease isDisable={true} />
-            </div>
-            <div className="exercise3">
-              <h2>Exercise 3</h2>
-              <FormInput />
-            </div>
 
+        <div>
+          <div className="exercise1">
+            <h2>Exercise 1</h2>
+            <IncreaseDecrease className="Exercise1" />
           </div>
-        </body>
+          <div className="exercise2">
+            <h2>Exercise 2</h2>
+            <IncreaseDecrease isDisable={true} />
+          </div>
+          <div className="exercise3">
+            <h2>Exercise 3</h2>
+            <FormInput />
+          </div>
+
+        </div>
+
       </div>
     );
   }
