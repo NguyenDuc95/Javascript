@@ -5,14 +5,20 @@ const typeThourh = {
     textDecoration: "line-through"
 };
 export default class ToDoList extends Component {
+    constructor(){
+        super();
+        this.handleSubmitEvent = this.handleSubmitEvent.bind(this);
+    }
     myRef = React.createRef();
     state = {
         inputValue: '',
         typeText: {}
     }
 
-    handleSubmitEvent = () => {
+    handleSubmitEvent(e) {
         const input = this.myRef.current.value;
+        e.persist();
+        e.preventDefault();
         if (input !== "") {
             this.setState({ inputValue: input });
             const optionId = listItem.length;
@@ -22,9 +28,10 @@ export default class ToDoList extends Component {
             alert("Please enter input ");
         }
     }
+
     handleKeyboard = (e) => {
         if (e.key === 'Enter') {
-            this.handleSubmitEvent();
+            this.handleSubmitEvent(e);
         }
     }
     handleClickItem(e) {
@@ -34,16 +41,11 @@ export default class ToDoList extends Component {
     render() {
         return (
             <div className="ToDoList">
-
-                {/* <form onSubmit={this.handleSubmitEvent}>
-                    <input type="text" ref={this.myRef} onKeyDown={this.handleKeyboard} maxLength={60} placeholder="input here ..." />
-                    <input type="submit" value="Submit" />
-                </form> */}
-                <div className="input-area">
-                    <input type="text" ref={this.myRef} onKeyDown={this.handleKeyboard} maxLength={60} placeholder="input here ..." />
-                    <button onClick={this.handleSubmitEvent}>Submit</button>
+                <form onSubmit={this.handleSubmitEvent} className="input-area">
+                    <input id="text-input" type="text" ref={this.myRef} onKeyDown={this.handleKeyboard} maxLength={60} placeholder="input here ..." />
+                    <input id="submit" type="submit" value="Submit" />
                     <div id="clear"></div>
-                </div>
+                </form>
                 <div className="show-area">
                     <ul >
                         {
