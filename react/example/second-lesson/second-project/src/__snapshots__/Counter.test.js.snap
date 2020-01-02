@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter should match snapshot 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="counter"
+  >
+    1
+  </div>
+  <button
+    onClick={[Function]}
+    value="Increase"
+  >
+    Increase2
+  </button>
+  <div>
+    <select>
+      <option
+        value={1}
+      >
+        1
+      </option>
+      <option
+        value={2}
+      >
+        2
+      </option>
+      <option
+        value={3}
+      >
+        3
+      </option>
+    </select>
+  </div>
+</div>
+`;

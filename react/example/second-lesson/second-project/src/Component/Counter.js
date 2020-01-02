@@ -39,8 +39,8 @@ export default class Counter extends Component {
         const { step } = this.props;
         return (
             <div className="App">
-                <div>{counter}</div>
-                <button onClick={this.handleClickButton} value="Increase">Increase</button>
+                <div className="counter">{counter}</div>
+                <button onClick={this.handleClickButton} value="Increase">Increase2</button>
                 {/* different value and defaultValue */}
                 {/* <AutoFocusInput defaultValue={1} type="number" /> defaultValue={1}  */}
                 {/* <br /><input defaultValue={1} type="number" ref={this.myRef} onChange={this.inputChange}></input> */}

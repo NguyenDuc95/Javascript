@@ -52,6 +52,10 @@
   min-width: 200px;
   color: white;
 }
+.link-container a.active{
+  background-color: white;
+  color: black;
+}
 .link-container a{
   margin-right: 10px;
 }

@@ -1,58 +1,61 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 export default class AsyncList extends Component {
 
 
     constructor(props) {
         super(props);
-        this.state = {
-            listItems: [],
-            hasError: false,
-            isLoading: false
-        }
+        // this.state = {
+        //     listItems: [],
+        //     hasError: false,
+        //     isLoading: false
+        // }
     }
-    makeRequest() {
-        this.setState({
-            isLoading: true
-        })
-        axios({
-            // "http://dummy.restapiexample.com/api/v1/employees
-            url: "http://52.77.254.77:3010/employees",
-            method: "get",
-            responseType: "json"
-        }).then(result => {
-            this.setState({
-                isLoading: false
-            })
-            if (result.status === 200) {
-                const data = result.data;
-                this.setState({
-                    listItems: data,
 
-                })
-            }
-        })
-            .catch((error) => {
-                console.log(error)
-                this.setState({
-                    isLoading: false,
-                    hasError: error.message
-                })
+    // makeRequest() {
+    //     this.setState({
+    //         isLoading: true
+    //     })
+    //     axios({
+    //         url: "http://52.77.254.77:3010/employees",
+    //         method: "get",
+    //         responseType: "json"
+    //     }).then(result => {
+    //         this.setState({
+    //             isLoading: false
+    //         })
+    //         if (result.status === 200) {
+    //             const data = result.data;
+    //             this.setState({
+    //                 listItems: data,
 
-            })
-    }
+    //             })
+    //         }
+    //     })
+    //         .catch((error) => {
+    //             console.log(error)
+    //             this.setState({
+    //                 isLoading: false,
+    //                 hasError: error.message
+    //             })
+
+    //         })
+    // }
     // after render is ok, load data
     componentDidMount() {
-        this.makeRequest();
-        this.timer = setInterval(() => {
-            this.makeRequest();
-        }, 5000);
+        // this.makeRequest();
+        // this.timer = setInterval(() => {
+        //     this.makeRequest();
+        // }, 5000);
+        this.props.updateEmployee("http://52.77.254.77:3010/employees");
     }
-    componentWillUnmount(){
+    componentWillUnmount() {
         clearInterval(this.timer);
     }
     render() {
-        const { listItems, isLoading, hasError } = this.state;
+        const { listItems } = this.props;
+        let hasError = false;
+        let isLoading = false;
+        // let listItems = this.props.listItems;
         let listRender = null;
         if (isLoading) {
             listRender = <div>Loading</div>;
@@ -66,6 +69,7 @@ export default class AsyncList extends Component {
                             <div key={item.id}>{item.employee_name}</div>
                         )
                     })}
+                    {/* {listItems} */}
                 </div></div>;
         }
         return (

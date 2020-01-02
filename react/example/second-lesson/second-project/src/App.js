@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Counter from './Component/Counter'
+import Counter from './Component/Counter';
+import CounterContainer from './containers/CounterContainer';
+import EmployeeContainer from './containers/EmployeesContainer'
 import AsyncList from './Component/AsyncList';
 import AutoFocusInput from './Component/AutoFocusInput'
-import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Switch, Route, NavLink,Link} from 'react-router-dom';
 import HomePage from './Component/Homepage'
 import ErrorPage from './Component/ErrorPage'
 
@@ -22,9 +24,10 @@ export default class App extends Component {
         <div className="App">
           <header className="App-header">
             <div className="link-container">
-              <Link to="/counter" >counter</Link>
-              <Link to="/list" >list</Link>
-              <Link to="/input" >input</Link>
+              <NavLink activeClassName="active" to="/counter">counter</NavLink>
+              <NavLink activeClassName="active" to="/counter2/:id" >counter2</NavLink>
+              <NavLink activeClassName="active" to="/list" >list</NavLink>
+              <NavLink activeClassName="active" to="/input" >input</NavLink>
             </div>
             <div className="conten-container">
               {/*  use render to render component with param */}
@@ -32,7 +35,8 @@ export default class App extends Component {
               <Switch>
                 <Route exact path="/" component={HomePage}/>
                 <Route path="/counter/:id" component={Counter} />
-                <Route path="/list" component={AsyncList} />
+                <Route path="/counter2/:id" component={CounterContainer} />
+                <Route path="/list" component={EmployeeContainer} />
                 <Route path="/input" render={()=><AutoFocusInput type="text" defaulValue="something"/>} />
                 <Route component={ErrorPage} />
               </Switch>
