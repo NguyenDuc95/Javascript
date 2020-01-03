@@ -3,13 +3,15 @@ const typeThourh = {
     textDecoration: "line-through"
 };
 export default class TodoList extends Component {
-
+    static defaultProps = {
+        todoList: [],
+    }
     render() {
-        let listItem = this.props.todoList;
+        const { todoList } = this.props;
         return (
             <div >
                 {
-                    listItem.map(
+                    todoList.map(
                         (item, index) => {
                             const styleTemp = item.is_completed ? typeThourh : {};
                             return <div key={item.id} style={styleTemp} >{item.title}</div>
